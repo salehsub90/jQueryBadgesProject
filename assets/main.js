@@ -12,12 +12,24 @@ $(function() {
     var badges = $('#badges');
 
     courses.forEach(function(course) {
+      console.log(course);
+
       var course = $('<div />', {
         'class': 'course'
       }).appendTo(badges);
 
       $('<h3 />', {
         text: course.title
+      }).appendTo(course);
+
+      $('<img />', {
+        src: course.badge
+      }).appendTo(course);
+
+      $('<a />', {
+        'class': 'btn btn-primary',
+        target: course.url,
+        text: 'See Cource'
       }).appendTo(course);
     });
   }
