@@ -15,7 +15,7 @@ $(function() {
       $('<div />', {
         'class': 'course'
       }).appendTo(badges);
-    });
+    })
   }
 
 });
