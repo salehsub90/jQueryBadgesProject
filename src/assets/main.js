@@ -12,25 +12,26 @@ $(function() {
     var badges = $('#badges');
 
     courses.forEach(function(course) {
-      console.log(course);
+      //console.log(course.title);
 
-      var course = $('<div />', {
+      var Onecourse = $('<div />', {
         'class': 'course'
       }).appendTo(badges);
 
       $('<h3 />', {
         text: course.title
-      }).appendTo(course);
+      }).appendTo(Onecourse);
 
       $('<img />', {
         src: course.badge
-      }).appendTo(course);
+      }).appendTo(Onecourse);
 
       $('<a />', {
         'class': 'btn btn-primary',
-        target: course.url,
-        text: 'See Cource'
-      }).appendTo(course);
+        target: '_blank',
+        href: course.url,
+        text: 'See Course'
+      }).appendTo(Onecourse);
     });
   }
 
