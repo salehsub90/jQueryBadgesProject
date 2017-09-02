@@ -14,24 +14,24 @@ $(function() {
     courses.forEach(function(course) {
       //console.log(course.title);
 
-      var Onecourse = $('<div />', {
+      var $course = $('<div />', {
         'class': 'course'
       }).appendTo($badges);
 
       $('<h3 />', {
         text: course.title
-      }).appendTo(Onecourse);
+      }).appendTo($course);
 
       $('<img />', {
         src: course.badge
-      }).appendTo(Onecourse);
+      }).appendTo($course);
 
       $('<a />', {
         'class': 'btn btn-primary',
         target: '_blank',
         href: course.url,
         text: 'See Course'
-      }).appendTo(Onecourse);
+      }).appendTo($course);
     });
   }
 
