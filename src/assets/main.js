@@ -9,14 +9,14 @@ $(function() {
 
   function addCourses(courses) {
 
-    var badges = $('#badges');
+    var thisBadge = $('#badges');
 
     courses.forEach(function(course) {
       //console.log(course.title);
 
       var Onecourse = $('<div />', {
         'class': 'course'
-      }).appendTo(badges);
+      }).appendTo(thisBadge);
 
       $('<h3 />', {
         text: course.title
